@@ -1,0 +1,19 @@
+type Query {
+    hello: String
+    users: [User]
+    user(id: Int): User
+}
+
+type Mutation {
+    createUser(firstName: String!, lastName: String!): User!
+}
+
+type Subscription {
+  userAdded: User
+}
+
+schema {
+    query: Query
+    mutation: Mutation,
+    subscription: Subscription
+}
